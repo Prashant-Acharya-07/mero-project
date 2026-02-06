@@ -1,1 +1,254 @@
-<h1>    my name is prashant acharya......    </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VividVibe | Modern Threads</title>
+    <style>
+        /* Modern CSS Reset & Variables */
+        :root {
+            --primary: #ff4757;
+            --secondary: #2f3542;
+            --accent: #70a1ff;
+            --bg: #f1f2f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--secondary);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 400px;
+            background: linear-gradient(45deg, #ff4757, #ffa502);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; }
+
+        /* Filter Section */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn-filter {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            background: var(--white);
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .btn-filter:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Product Grid */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding-bottom: 50px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .category-tag {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        .price {
+            color: var(--primary);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .buy-btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            border: none;
+            background: var(--secondary);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--secondary);
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">VividVibe</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Cart (0)</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Fresh Summer Style</h1>
+        <p>Express yourself with our new collection</p>
+    </header>
+
+    <div class="categories">
+        <button class="btn-filter">All</button>
+        <button class="btn-filter">Male</button>
+        <button class="btn-filter">Female</button>
+        <button class="btn-filter">T-Shirts</button>
+        <button class="btn-filter">Shoes</button>
+    </div>
+
+    <main class="container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80" alt="Tshirt">
+            <div class="card-info">
+                <span class="category-tag">Male | T-Shirt</span>
+                <h3 class="product-name">Classic White Tee</h3>
+                <p class="price">$25.00</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=500&q=80" alt="Shoes">
+            <div class="card-info">
+                <span class="category-tag">Female | Shoes</span>
+                <h3 class="product-name">Cyan High Heels</h3>
+                <p class="price">$85.00</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=500&q=80" alt="Tshirt">
+            <div class="card-info">
+                <span class="category-tag">Female | T-Shirt</span>
+                <h3 class="product-name">Graphic Urban Tee</h3>
+                <p class="price">$30.00</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt="Shoes">
+            <div class="card-info">
+                <span class="category-tag">Male | Shoes</span>
+                <h3 class="product-name">Red Sport Runners</h3>
+                <p class="price">$120.00</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VividVibe Clothing Co. | Designed for Style</p>
+    </footer>
+
+</body>
+</html>
